@@ -5,6 +5,23 @@ import { Container, Content, Helper, Main, Title } from '../components/common'
 import { useEffect, useState } from 'react'
 import { isMobile } from 'react-device-detect'
 import { AppBanner } from '../components/appBanner'
+import styled from 'styled-components'
+
+const Link = styled.a`
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  padding: 12px 32px;
+  margin: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  border-radius: 50px;
+
+  background-image: linear-gradient(to right, rgb(1 134 218), rgb(182 49 167));
+  border: 0;
+  color: white !important;
+  text-decoration: none;
+`
 
 const Home: NextPage = () => {
   const [isMetaMask, setMetaMask] = useState<Boolean>(false)
@@ -37,7 +54,8 @@ const Home: NextPage = () => {
           {isMobile && !isMetaMask && <AppBanner />}
           {!isMobile && !isMetaMask && (
             <Helper>
-              まずはMetaMaskのエクステンションをインストールしてね
+              <p>まずはMetaMaskのエクステンションをインストールしてね</p>
+              <Link href='https://metamask.io/download/'>MetaMaskをインストール</Link>
             </Helper>
           )}
           {isMetaMask && <ConnectWallet />}
