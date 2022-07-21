@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# WARNING 
+now, the shiniri is deprecated. we are now moving to omise's page.
+this is the repo: https://github.com/henkaku-center/omise-interface/tree/main/pages/shiniri 
 
 ## Getting Started
 
